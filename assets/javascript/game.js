@@ -5,7 +5,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var guessesSoFar = 0;
+var guessesSoFar = [];
 
 // Create a variable for computerChoice 
 document.onkeyup = function (event) {
@@ -20,13 +20,18 @@ document.onkeyup = function (event) {
         guessesLeft = 9;
         guessesSoFar = [];
         console.log("win");
-    };
+    }
     if (userChoice !== computerChoice) {
-        losses++;
         guessesLeft--;
-        
+        guessesSoFar.push(userChoice)
         console.log("lose");
-    };
+        
+    }
+    if (guessesLeft === 0) {
+        losses++;
+        guessesLeft = 9;
+        userChoice;
+    }
 
 
 
@@ -34,7 +39,7 @@ document.onkeyup = function (event) {
     "<p>Wins: " + wins + "</p>" +
     "<p>Losses: " + losses + "</p>" +
     "<p>Guesses Left: " + guessesLeft + "</p>" +
-    "<p>Your Guesses so far: " + guessesSoFar.join(", ") + "</p>";
+    "<p>Your Guesses so far: " + userChoice + ", " + "</p>"
 
     document.querySelector("#game").innerHTML = html;
 
