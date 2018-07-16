@@ -14,32 +14,34 @@ document.onkeyup = function (event) {
     // var for useerChoice
     var userChoice = event.key;
     console.log(userChoice);
-    // if statement to compare userChoice to computerchoice
+    // if statements to compare userChoice to computerchoice
+    // What happenes if they are ===
     if (userChoice === computerChoice) {
         wins++;
         guessesLeft = 9;
         guessesSoFar = [];
         console.log("win");
     }
+    // What happenes when they're !==
     if (userChoice !== computerChoice) {
         guessesLeft--;
-        guessesSoFar.push(userChoice)
+        guessesSoFar.push(userChoice);
         console.log("lose");
-        
+    // Reset
     }
     if (guessesLeft === 0) {
         losses++;
         guessesLeft = 9;
-        userChoice;
+        guessesSoFar = [];
     }
 
 
-
+    // Re-write the html to reflect game info
     var html = 
     "<p>Wins: " + wins + "</p>" +
     "<p>Losses: " + losses + "</p>" +
     "<p>Guesses Left: " + guessesLeft + "</p>" +
-    "<p>Your Guesses so far: " + userChoice + ", " + "</p>"
+    "<p>Your Guesses so far: " + guessesSoFar.join(", ") + "</p>"
 
     document.querySelector("#game").innerHTML = html;
 
