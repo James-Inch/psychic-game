@@ -21,6 +21,7 @@ h1 {
     text-align: center;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    opacity: 0.75;
 }
 
 h3 {
@@ -29,11 +30,12 @@ h3 {
     font-size: 30px;
     font-family: 'Russo One', sans-serif;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    opacity: 0.75;
 }
 #game {
     padding: 40px;
     margin: 0;
-
+    opacity: 0.75;
     font-family: 'Russo One', sans-serif;
     text-align: center;
     text-shadow: 0 0 5px #fff, 0 0 20px #1900ff, 0 0 30px #1900ff, 0 0 40px #1900ff, 0 0 55px #1900ff, 0 0 75px #1900ff;
